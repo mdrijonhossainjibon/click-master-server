@@ -2,6 +2,13 @@ const TelegramBot = require('node-telegram-bot-api');
 const mongoose = require('mongoose');
 const token = '7225380221:AAEUo8B-szHox0ChqFLlkRVTi8O_Z7Gu0QE';
 const bot = new TelegramBot(token, {polling: true});
+const express = require('express')
+const app = express()
+const port = process.env.PORT || 4000;
+
+app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
+})
 
 const webAppUrl = 'https://click-master-lime.vercel.app/';
 
